@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171820" />
+    <title>Rooroom</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main id="room" class="room" data-mode="off" aria-label="Rooroom, a cozy illustrated room">
+      <div class="room-wall" aria-hidden="true"></div>
+      <div class="room-floor" aria-hidden="true"></div>
+
+      <div class="cool-breeze climate-light" aria-hidden="true">
+        <span class="cool-breeze-source"></span>
+        <span class="cool-breeze-wall"></span>
+        <span class="cool-breeze-furniture"></span>
+        <span class="cool-breeze-ambient"></span>
+      </div>
+      <div class="warm-heat climate-light" aria-hidden="true">
+        <span class="warm-heat-source"></span>
+        <span class="warm-heat-wall"></span>
+        <span class="warm-heat-furniture"></span>
+        <span class="warm-heat-ambient"></span>
+      </div>
+      <img class="asset air-conditioner" data-asset="ac.png" alt="Pastel wall-mounted air conditioner" />
+
+      <div class="poster">
+        <img class="asset" data-asset="wall-poster.png" alt="" />
+      </div>
+
+      <div class="lantern-position" aria-hidden="true">
+        <div class="lantern">
+          <span class="lantern-light"></span>
+          <img class="asset lantern-image lantern-image--lit" data-asset="lantern-lit.png" alt="" />
+          <img class="asset lantern-image lantern-image--extinguished" data-asset="lantern-extinguished.png" alt="" />
+        </div>
+      </div>
+
+      <div class="heater-unit">
+        <img class="asset heater" data-asset="heater-off.png" alt="Vintage wall heater" />
+        <img class="asset heater heater--on" data-asset="heater-on.png" alt="" aria-hidden="true" />
+        <span class="heater-glow" aria-hidden="true"></span>
+      </div>
+      <img class="asset couch" data-asset="couch.png" alt="Couch beneath the wall poster" />
+      <img class="asset roo" data-asset="roo.png" alt="Roo sleeping on her side, back facing the viewer" />
+      <img class="asset table" data-asset="table.png" alt="Wooden table with the supplied pile of clothes" />
+      <img class="asset blanket blanket--folded" data-asset="folded-blanket.png" alt="Folded blanket resting on the couch near Roo's feet" />
+      <img class="asset blanket blanket--open" data-asset="open-blanket-cutout.png" alt="Open blanket covering Roo" />
+      <img class="asset sock" data-asset="sock.png" alt="" aria-hidden="true" />
+
+      <div class="lantern-illumination" aria-hidden="true"></div>
+      <div class="lantern-illumination-color" aria-hidden="true"></div>
+      <div class="power-darkness" aria-hidden="true"></div>
+      <div class="room-tint" aria-hidden="true"></div>
+
+      <nav class="mode-controls" aria-label="Room mode">
+        <button type="button" data-select-mode="ac" aria-label="AC" aria-pressed="false" hidden>
+          <img src="./media/buttons/btn-ac.png" alt="" draggable="false" />
+        </button>
+        <button type="button" data-select-mode="heater" aria-label="Heater" aria-pressed="false" hidden>
+          <img src="./media/buttons/btn-heater.png" alt="" draggable="false" />
+        </button>
+        <button type="button" data-select-mode="on" aria-label="Power on" aria-pressed="false">
+          <img src="./media/buttons/btn-on.png" alt="" draggable="false" />
+        </button>
+        <button type="button" data-select-mode="off" aria-label="Power off" aria-pressed="true" hidden>
+          <img src="./media/buttons/btn-off.png" alt="" draggable="false" />
+        </button>
+      </nav>
+      <p class="asset-error" role="status" hidden></p>
+    </main>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
